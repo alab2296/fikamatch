@@ -6,7 +6,7 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 ## Phase 1 - Foundation
 
 - [x] 1. Monorepo, CI, PR template
-- [ ] 2. Product docs and this plan
+- [x] 2. Product docs and this plan
 - [ ] 3. Config loading with zod (env validation) and structured logging
 - [ ] 4. Database setup: migration runner, per-test schema helper, first migration (users)
 - [ ] 5. i18n: sv/en message files, locale detection, translated error responses
