@@ -1,0 +1,7 @@
+{
+  "error.not_found": "Sidan hittades inte.",
+  "error.validation": "Uppgifterna är ogiltiga.",
+  "error.internal": "Något gick fel. Försök igen senare.",
+  "error.unauthorized": "Du måste logga in.",
+  "error.forbidden": "Du har inte behörighet till detta."
+}

@@ -1,0 +1,7 @@
+{
+  "error.not_found": "Not found.",
+  "error.validation": "The data is invalid.",
+  "error.internal": "Something went wrong. Please try again later.",
+  "error.unauthorized": "You need to sign in.",
+  "error.forbidden": "You do not have permission to do this."
+}
