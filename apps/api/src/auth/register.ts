@@ -24,7 +24,8 @@ export function registerAuthRoutes(app: FastifyInstance, db: Queryable) {
     const parsed = body.safeParse(req.body);
     if (!parsed.success) throw new ApiError(400, "validation");
     const input = parsed.data;
-    if (ageOn(input.birthDate, new Date()) === null) throw new ApiError(400, "validation");
+    if (ageOn(input.birthDate, new Date()) === null)
+      throw new ApiError(400, "validation");
     if (!isAdult(input.birthDate)) throw new ApiError(403, "underage");
 
     const passwordHash = await hashPassword(input.password);
@@ -40,13 +41,11 @@ export function registerAuthRoutes(app: FastifyInstance, db: Queryable) {
           input.locale ?? req.locale,
         ],
       );
-      return reply
-        .status(201)
-        .send({
-          id: res.rows[0]!.id,
-          email: input.email,
-          locale: input.locale ?? req.locale,
-        });
+      return reply.status(201).send({
+        id: res.rows[0]!.id,
+        email: input.email,
+        locale: input.locale ?? req.locale,
+      });
     } catch (err) {
       if ((err as { code?: string }).code === "23505")
         throw new ApiError(409, "account_exists");
