@@ -8,12 +8,12 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 - [x] 1. Monorepo, CI, PR template
 - [x] 2. Product docs and this plan
 - [x] 3. Config loading with zod (env validation) and structured logging
-- [ ] 4. Database setup: migration runner, per-test schema helper, first migration (users)
-- [ ] 5. i18n: sv/en message files, locale detection, translated error responses
+- [x] 4. Database setup: migration runner, per-test schema helper, first migration (users)
+- [x] 5. i18n: sv/en message files, locale detection, translated error responses
 - [ ] 6. Register endpoint with password hashing and 18+ age gate
 - [ ] 7. Login, JWT access and refresh tokens
 - [ ] 8. Roles and auth guard, rate limits on auth routes
-- [ ] 9. VerificationProvider interface and fake implementation
+- [x] 9. VerificationProvider interface and fake implementation
 
 ## Phase 2 - Profiles
 
