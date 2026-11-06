@@ -10,14 +10,14 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 - [x] 3. Config loading with zod (env validation) and structured logging
 - [x] 4. Database setup: migration runner, per-test schema helper, first migration (users)
 - [x] 5. i18n: sv/en message files, locale detection, translated error responses
-- [ ] 6. Register endpoint with password hashing and 18+ age gate
+- [x] 6. Register endpoint with password hashing and 18+ age gate
 - [ ] 7. Login, JWT access and refresh tokens
 - [ ] 8. Roles and auth guard, rate limits on auth routes
 - [x] 9. VerificationProvider interface and fake implementation
 
 ## Phase 2 - Profiles
 
-- [ ] 10. Cities table and seed (Stockholm, Gothenburg, Malmo, Uppsala)
+- [x] 10. Cities table and seed (Stockholm, Gothenburg, Malmo, Uppsala)
 - [ ] 11. Profile CRUD
 - [ ] 12. Preferences CRUD
 - [ ] 13. Approximate location with PostGIS (rounding, never exact)
