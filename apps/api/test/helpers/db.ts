@@ -20,7 +20,13 @@ export async function createTestDb(): Promise<TestDb> {
   await client.connect();
   await client.query(`CREATE SCHEMA ${schema}`);
   await client.query(`SET search_path TO ${schema}, public`);
-  await migrate(client);
+  // CREATE EXTENSION races when several test files migrate at once
+  await client.query("SELECT pg_advisory_lock(7301)");
+  try {
+    await migrate(client);
+  } finally {
+    await client.query("SELECT pg_advisory_unlock(7301)");
+  }
   return {
     client,
     schema,
