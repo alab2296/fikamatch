@@ -1,5 +1,6 @@
 import Fastify from "fastify";
 import type { Config } from "./config.js";
+import { registerAuthRoutes, type Queryable } from "./auth/register.js";
 import {
   defaultLocale,
   detectLocale,
@@ -23,7 +24,10 @@ export class ApiError extends Error {
   }
 }
 
-export function buildApp(config?: Pick<Config, "LOG_LEVEL">) {
+export function buildApp(
+  config?: Pick<Config, "LOG_LEVEL">,
+  deps: { db?: Queryable } = {},
+) {
   const app = Fastify({
     logger: {
       level: config?.LOG_LEVEL ?? "silent",
@@ -53,6 +57,8 @@ export function buildApp(config?: Pick<Config, "LOG_LEVEL">) {
   });
 
   app.get("/health", async () => ({ status: "ok" }));
+
+  if (deps.db) registerAuthRoutes(app, deps.db);
 
   return app;
 }
