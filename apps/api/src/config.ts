@@ -6,8 +6,8 @@ const schema = z.object({
   LOG_LEVEL: z
     .enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"])
     .default("info"),
-  DATABASE_URL: z.string().url().default("postgres://fika:fika@localhost:5432/fikamatch"),
-  REDIS_URL: z.string().url().default("redis://localhost:6379"),
+  DATABASE_URL: z.string().url().default("postgres://fika:fika@localhost:5433/fikamatch"),
+  REDIS_URL: z.string().url().default("redis://localhost:6380"),
   JWT_SECRET: z.string().min(16),
   LLM_API_KEY: z.string().optional(),
 });
