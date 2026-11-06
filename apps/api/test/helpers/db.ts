@@ -5,7 +5,7 @@ import { migrate } from "../../src/db/migrate.js";
 export const testDatabaseUrl =
   process.env.TEST_DATABASE_URL ??
   process.env.DATABASE_URL ??
-  "postgres://fika:fika@localhost:5432/fikamatch";
+  "postgres://fika:fika@localhost:5433/fikamatch";
 
 export interface TestDb {
   client: pg.Client;
