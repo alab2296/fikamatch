@@ -3,6 +3,7 @@
   "error.validation": "The data is invalid.",
   "error.internal": "Something went wrong. Please try again later.",
   "error.unauthorized": "You need to sign in.",
+  "error.invalid_credentials": "Email or password is wrong.",
   "error.forbidden": "You do not have permission to do this.",
   "error.underage": "You must be at least 18 to use FikaMatch.",
   "error.account_exists": "An account with those details already exists."
