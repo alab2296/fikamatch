@@ -11,8 +11,8 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 - [x] 4. Database setup: migration runner, per-test schema helper, first migration (users)
 - [x] 5. i18n: sv/en message files, locale detection, translated error responses
 - [x] 6. Register endpoint with password hashing and 18+ age gate
-- [ ] 7. Login, JWT access and refresh tokens
-- [ ] 8. Roles and auth guard, rate limits on auth routes
+- [x] 7. Login, JWT access and refresh tokens
+- [x] 8. Roles and auth guard, rate limits on auth routes
 - [x] 9. VerificationProvider interface and fake implementation
 
 ## Phase 2 - Profiles
@@ -21,7 +21,7 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 - [ ] 11. Profile CRUD
 - [ ] 12. Preferences CRUD
 - [ ] 13. Approximate location with PostGIS (rounding, never exact)
-- [ ] 14. Photo storage interface and signed URLs
+- [x] 14. Photo storage interface and signed URLs
 - [ ] 15. Photo upload and ordering endpoints
 - [ ] 16. Consents table and endpoints
 
@@ -37,7 +37,7 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 
 ## Phase 4 - Chat
 
-- [ ] 24. Messages table and REST history
+- [x] 24. Messages table and REST history
 - [ ] 25. WebSocket gateway with JWT auth
 - [ ] 26. Send and receive over WebSocket, block enforcement
 - [ ] 27. Read receipts
