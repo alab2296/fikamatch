@@ -1,6 +1,7 @@
 import Fastify from "fastify";
 import type { Config } from "./config.js";
 import { registerLoginRoute } from "./auth/login.js";
+import { registerProfileRoutes } from "./profiles/routes.js";
 import { registerAuthRoutes, type Queryable } from "./auth/register.js";
 import {
   defaultLocale,
@@ -60,7 +61,10 @@ export function buildApp(
   app.get("/health", async () => ({ status: "ok" }));
 
   if (deps.db) registerAuthRoutes(app, deps.db);
-  if (deps.db && deps.jwtSecret) registerLoginRoute(app, deps.db, deps.jwtSecret);
+  if (deps.db && deps.jwtSecret) {
+    registerLoginRoute(app, deps.db, deps.jwtSecret);
+    registerProfileRoutes(app, deps.db, deps.jwtSecret);
+  }
 
   return app;
 }
