@@ -18,7 +18,7 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 ## Phase 2 - Profiles
 
 - [x] 10. Cities table and seed (Stockholm, Gothenburg, Malmo, Uppsala)
-- [ ] 11. Profile CRUD
+- [x] 11. Profile CRUD
 - [ ] 12. Preferences CRUD
 - [ ] 13. Approximate location with PostGIS (rounding, never exact)
 - [x] 14. Photo storage interface and signed URLs
@@ -37,7 +37,7 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 
 ## Phase 4 - Chat
 
-- [x] 24. Messages table and REST history
+- [ ] 24. Messages table and REST history
 - [ ] 25. WebSocket gateway with JWT auth
 - [ ] 26. Send and receive over WebSocket, block enforcement
 - [ ] 27. Read receipts
@@ -75,7 +75,7 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 - [ ] 50. GDPR delete (rows and files really gone), test
 - [ ] 51. OpenAPI file and contract test
 - [ ] 52. Generated Dart client setup
-- [ ] 53. README with diagram
+- [x] 53. README with diagram
 - [ ] 54. Load test
 - [ ] 55. Tag v0.1.0
 - [ ] 56. Hardening pass and tag v1.0.0
