@@ -6,5 +6,8 @@
   "error.invalid_credentials": "Fel e-postadress eller lösenord.",
   "error.forbidden": "Du har inte behörighet till detta.",
   "error.underage": "Du måste vara minst 18 år för att använda FikaMatch.",
-  "error.account_exists": "Det finns redan ett konto med dessa uppgifter."
+  "error.account_exists": "Det finns redan ett konto med dessa uppgifter.",
+  "error.unsupported_media": "Endast JPEG-, PNG- eller WebP-bilder accepteras.",
+  "error.too_many_photos": "Du kan ha högst 6 bilder.",
+  "error.conflict": "Det kolliderade med en annan förfrågan. Försök igen."
 }

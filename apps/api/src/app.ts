@@ -4,6 +4,8 @@ import { registerLoginRoute } from "./auth/login.js";
 import { registerProfileRoutes } from "./profiles/routes.js";
 import { registerPreferenceRoutes } from "./preferences/routes.js";
 import { registerLocationRoutes } from "./location/routes.js";
+import { registerPhotoRoutes } from "./photos/routes.js";
+import type { PhotoStorage } from "./storage/provider.js";
 import { registerAuthRoutes, type Queryable } from "./auth/register.js";
 import {
   defaultLocale,
@@ -30,7 +32,7 @@ export class ApiError extends Error {
 
 export function buildApp(
   config?: Pick<Config, "LOG_LEVEL">,
-  deps: { db?: Queryable; jwtSecret?: string } = {},
+  deps: { db?: Queryable; jwtSecret?: string; storage?: PhotoStorage } = {},
 ) {
   const app = Fastify({
     logger: {
@@ -68,6 +70,7 @@ export function buildApp(
     registerProfileRoutes(app, deps.db, deps.jwtSecret);
     registerPreferenceRoutes(app, deps.db, deps.jwtSecret);
     registerLocationRoutes(app, deps.db, deps.jwtSecret);
+    if (deps.storage) registerPhotoRoutes(app, deps.db, deps.jwtSecret, deps.storage);
   }
 
   return app;

@@ -6,5 +6,8 @@
   "error.invalid_credentials": "Email or password is wrong.",
   "error.forbidden": "You do not have permission to do this.",
   "error.underage": "You must be at least 18 to use FikaMatch.",
-  "error.account_exists": "An account with those details already exists."
+  "error.account_exists": "An account with those details already exists.",
+  "error.unsupported_media": "Only JPEG, PNG or WebP images are accepted.",
+  "error.too_many_photos": "You can have at most 6 photos.",
+  "error.conflict": "That clashed with another request. Please try again."
 }
