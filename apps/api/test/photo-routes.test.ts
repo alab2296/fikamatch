@@ -92,7 +92,7 @@ describe("photos", () => {
 
   it("refuses a tampered or unsigned link", async () => {
     const url = new URL((await list()).json().photos[0].url);
-    const bad = url.search.replace(/sig=./, "sig=0");
+    const bad = url.search.replace(/sig=(.)/, (_m, c) => `sig=${c === "0" ? "1" : "0"}`);
     expect(
       (await app.inject({ method: "GET", url: url.pathname + bad })).statusCode,
     ).toBe(403);
