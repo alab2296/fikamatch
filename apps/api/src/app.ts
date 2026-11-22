@@ -5,6 +5,7 @@ import { registerProfileRoutes } from "./profiles/routes.js";
 import { registerPreferenceRoutes } from "./preferences/routes.js";
 import { registerLocationRoutes } from "./location/routes.js";
 import { registerPhotoRoutes } from "./photos/routes.js";
+import { registerConsentRoutes } from "./consents/routes.js";
 import type { PhotoStorage } from "./storage/provider.js";
 import { registerAuthRoutes, type Queryable } from "./auth/register.js";
 import {
@@ -70,6 +71,7 @@ export function buildApp(
     registerProfileRoutes(app, deps.db, deps.jwtSecret);
     registerPreferenceRoutes(app, deps.db, deps.jwtSecret);
     registerLocationRoutes(app, deps.db, deps.jwtSecret);
+    registerConsentRoutes(app, deps.db, deps.jwtSecret);
     if (deps.storage) registerPhotoRoutes(app, deps.db, deps.jwtSecret, deps.storage);
   }
 
