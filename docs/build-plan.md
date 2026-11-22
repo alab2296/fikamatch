@@ -23,7 +23,7 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 - [x] 13. Approximate location with PostGIS (rounding, never exact)
 - [x] 14. Photo storage interface and signed URLs
 - [x] 15. Photo upload and ordering endpoints
-- [ ] 16. Consents table and endpoints
+- [x] 16. Consents table and endpoints
 
 ## Phase 3 - Discovery
 
