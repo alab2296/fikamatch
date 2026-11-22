@@ -19,7 +19,7 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 
 - [x] 10. Cities table and seed (Stockholm, Gothenburg, Malmo, Uppsala)
 - [x] 11. Profile CRUD
-- [ ] 12. Preferences CRUD
+- [x] 12. Preferences CRUD
 - [ ] 13. Approximate location with PostGIS (rounding, never exact)
 - [x] 14. Photo storage interface and signed URLs
 - [ ] 15. Photo upload and ordering endpoints
