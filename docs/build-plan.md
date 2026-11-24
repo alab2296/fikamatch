@@ -28,7 +28,7 @@ Each merged item also gets a note in `docs/walkthroughs/`.
 ## Phase 3 - Discovery
 
 - [x] 17. Blocks table and endpoints
-- [ ] 18. Candidate feed query (age, distance, preferences, excludes blocked and swiped)
+- [x] 18. Candidate feed query (age, distance, preferences, excludes blocked and swiped)
 - [ ] 19. Swipe endpoint, idempotent
 - [ ] 20. Atomic mutual match, concurrency test
 - [ ] 21. Matches list and unmatch
