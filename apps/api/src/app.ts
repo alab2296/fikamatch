@@ -7,6 +7,7 @@ import { registerLocationRoutes } from "./location/routes.js";
 import { registerPhotoRoutes } from "./photos/routes.js";
 import { registerConsentRoutes } from "./consents/routes.js";
 import { registerBlockRoutes } from "./blocks/routes.js";
+import { registerFeedRoutes } from "./feed/routes.js";
 import type { PhotoStorage } from "./storage/provider.js";
 import { registerAuthRoutes, type Queryable } from "./auth/register.js";
 import {
@@ -74,6 +75,7 @@ export function buildApp(
     registerLocationRoutes(app, deps.db, deps.jwtSecret);
     registerConsentRoutes(app, deps.db, deps.jwtSecret);
     registerBlockRoutes(app, deps.db, deps.jwtSecret);
+    registerFeedRoutes(app, deps.db, deps.jwtSecret);
     if (deps.storage) registerPhotoRoutes(app, deps.db, deps.jwtSecret, deps.storage);
   }
 
